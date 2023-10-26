@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @include('front.layouts.head')    
+    @include('back.layouts.head')    
     @yield('css')
 </head>
 <body>
@@ -16,8 +16,8 @@
         @include('back.layouts.header')
          <!--  Header End -->
             @yield('content')  
-            @include('front.layouts.footer')
-            @include('front.layouts.script')
+            @include('back.layouts.footer')
+            @include('back.layouts.script')
 @           yield('js')
 </body>
 </html>
