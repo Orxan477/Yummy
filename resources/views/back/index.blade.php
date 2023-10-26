@@ -1,1 +1,2 @@
-test
+@extends('back.layouts.master')
+
