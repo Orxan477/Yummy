@@ -10,4 +10,9 @@ class Category extends Model
     use HasFactory;
     protected $table='categories';
     protected $filltable=['name'];
+
+    public function menu()
+    {
+        return $this->hasMany(Menu::class);
+    }
 }
