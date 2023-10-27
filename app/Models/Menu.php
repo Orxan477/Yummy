@@ -15,8 +15,9 @@ class Menu extends Model
         'ingredient',
         'price',
     ];
-    public function categories()
+
+    public function category()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id');
     }
 }

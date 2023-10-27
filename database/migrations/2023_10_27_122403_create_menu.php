@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('image',150);
             $table->text('ingredient');
             $table->integer('price');
+            $table->unsignedBigInteger('category_id'); // Yabancı anahtar
             $table->timestamps();
             $table->boolean('is_active')->default(false);
 
-            $table->foreign('categories_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories');
 
         });
     }

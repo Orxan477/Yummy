@@ -11,8 +11,8 @@ class Category extends Model
     protected $table='categories';
     protected $filltable=['name'];
 
-    public function menu()
+    public function menus()
     {
-        return $this->hasMany(Menu::class);
+        return $this->hasMany(Menu::class, 'category_id');
     }
 }
