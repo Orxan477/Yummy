@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
+class Why_Choose extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'content',
-        'image_main',
-        'image'
+    protected $filltable=[
+        'title',
+        'content'
     ];
 }

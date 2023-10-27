@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('heroes', function (Blueprint $table) {
+        Schema::create('why_choose', function (Blueprint $table) {
             $table->id();
             $table->string('title',50);
-            $table->string('content',150);
-            $table->string('image',150);
+            $table->text('content');
+            $table->boolean("is_active")->default(false);
             $table->timestamps();
-            $table->boolean('is_active')->default(false);
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('heroes');
+        Schema::dropIfExists('why_choose');
     }
 };
