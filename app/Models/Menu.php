@@ -14,6 +14,7 @@ class Menu extends Model
         'name',
         'ingredient',
         'price',
+        'category_id'
     ];
 
     public function category()
