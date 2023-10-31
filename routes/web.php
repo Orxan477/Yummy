@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Back\AdminController;
+use App\Http\Controllers\Back\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,6 @@ Route::get('/', function () {
 // });
 
 Route::get('/admin', [AdminController::class, "index"])->name('index');
+Route::get('/admin/login', [AuthController::class, "login"])->name('login');
+Route::get('/admin/register', [AuthController::class, "register"])->name('register');
+Route::post('/admin/register', [AuthController::class, "registerPost"])->name('registerPost');

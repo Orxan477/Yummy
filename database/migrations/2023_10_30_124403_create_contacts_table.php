@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('subject',50);
             $table->text('message');
             $table->text('answer');
-
+            $table->boolean('is_active')->default(false);
             $table->timestamps();
         });
     }
