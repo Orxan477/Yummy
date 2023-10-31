@@ -23,12 +23,13 @@ Route::get('/', function () {
 //     return view('back/index');
 // });
 
-Route::group(['middleware' => 'App\Http\Middleware\AdminPanelAccess'], function () {
+Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('index');
+    Route::get('/admin/register', [AuthController::class, "register"])->name('register');
+    Route::post('/admin/register', [AuthController::class, "registerPost"])->name('registerPost');
 });
 
-Route::get('/admin/login', [AuthController::class, "login"])->name('login');
-Route::post('/admin/login', [AuthController::class, "loginPost"])->name('loginPost');
-
-Route::get('/admin/register', [AuthController::class, "register"])->name('register');
-Route::post('/admin/register', [AuthController::class, "registerPost"])->name('registerPost');
+Route::group(['middleware' => 'login.check'], function () {
+    Route::get('/admin/login', [AuthController::class, "login"])->name('login');
+    Route::post('/admin/login', [AuthController::class, "loginPost"])->name('loginPost');
+});

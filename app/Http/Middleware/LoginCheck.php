@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class AdminPanelAccess
+class LoginCheck
 {
     /**
      * Handle an incoming request.
@@ -16,10 +16,8 @@ class AdminPanelAccess
     public function handle(Request $request, Closure $next): Response
     {
         if (auth()->check()) {
-            return $next($request); 
+            return redirect('/admin');
         }
-    
-        return redirect('/')->with('error', 'Bu sayfaya erişim izniniz yok');
-
+        return $next($request); 
     }
 }
