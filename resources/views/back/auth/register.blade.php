@@ -25,6 +25,7 @@
                 </a>
                 <form method="POST" action="{{ route('registerPost') }}">
                 @csrf
+                
                   <div class="mb-3">
                     <label for="exampleInputtext1" class="form-label">FullName</label>
                     <input type="text" class="form-control" name="name" id="exampleInputtext1" aria-describedby="textHelp">
