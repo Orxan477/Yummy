@@ -8,7 +8,7 @@
     <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
-        @include('back.layouts.sidebar')
+        @include('/back.layouts.sidebar')
     <!--  Sidebar End -->
         <!--  Main wrapper -->
             <div class="body-wrapper">
@@ -18,6 +18,6 @@
             @yield('content')  
             @include('back.layouts.footer')
             @include('back.layouts.script')
-@           yield('js')
+            @yield('js')
 </body>
 </html>

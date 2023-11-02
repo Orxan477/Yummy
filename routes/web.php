@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\AuthController;
+use App\Http\Controllers\Back\HeroController;
 use App\Http\Middleware\AuthAccess;
 
 /*
@@ -19,9 +20,6 @@ use App\Http\Middleware\AuthAccess;
 Route::get('/', function () {
     return view('index');
 });
-// Route::get('/admin', function () {
-//     return view('back/index');
-// });
 
 Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin', [AdminController::class, 'index'])->name('index');
@@ -35,3 +33,5 @@ Route::group(['middleware' => 'login.check'], function () {
 });
 
 Route::get('/admin/signout', [AuthController::class, 'signout'])->name('signout');
+
+Route::get('/admin/hero', [HeroController::class, 'index'])->name('hero');
