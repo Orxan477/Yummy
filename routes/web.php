@@ -33,3 +33,5 @@ Route::group(['middleware' => 'login.check'], function () {
     Route::get('/admin/login', [AuthController::class, "login"])->name('login');
     Route::post('/admin/login', [AuthController::class, "loginPost"])->name('loginPost');
 });
+
+Route::get('/admin/signout', [AuthController::class, 'signout'])->name('signout');

@@ -72,4 +72,9 @@ class AuthController extends Controller
             'user' => $user,
         ], 201);
     }
+    public function signout(Request $request) {
+        Auth::logout(); // Logging out the currently authenticated user
+    
+        return redirect('/'); // Redirect to a specific location after logging out
+    }    
 }
