@@ -34,4 +34,26 @@ Route::group(['middleware' => 'login.check'], function () {
 
 Route::get('/admin/signout', [AuthController::class, 'signout'])->name('signout');
 
+Route::get('/admin/dashboard', [HeroController::class, 'index'])->name('dashboard');
+
 Route::get('/admin/hero', [HeroController::class, 'index'])->name('hero');
+
+Route::get('/admin/about', [AboutController::class, 'index'])->name('about');
+
+Route::get('/admin/why', [WhyController::class, 'index'])->name('why');
+
+Route::get('/admin/statistic', [StatisticController::class, 'index'])->name('statistic');
+
+Route::get('/admin/faq', [FAQController::class, 'index'])->name('faq');
+
+Route::get('/admin/event', [EventController::class, 'index'])->name('event');
+
+Route::get('/admin/chef', [FAQController::class, 'index'])->name('chef');
+
+Route::get('/admin/reservation', [ReservationController::class, 'index'])->name('reservation');
+
+Route::get('/admin/gallery', [GalleryController::class, 'index'])->name('gallery');
+
+Route::get('/admin/contactus', [ContactUsController::class, 'index'])->name('contact_us');
+
+Route::get('/admin/setting', [SettingController::class, 'index'])->name('setting');

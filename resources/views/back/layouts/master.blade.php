@@ -11,7 +11,7 @@
         @include('/back.layouts.sidebar')
     <!--  Sidebar End -->
         <!--  Main wrapper -->
-            <div class="body-wrapper">
+        <div class="body-wrapper">
         <!--  Header Start -->
         @include('back.layouts.header')
          <!--  Header End -->
@@ -19,5 +19,7 @@
             @include('back.layouts.footer')
             @include('back.layouts.script')
             @yield('js')
+        </div>
+  </div>
 </body>
 </html>
