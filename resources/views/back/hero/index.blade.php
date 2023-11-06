@@ -3,6 +3,9 @@
 <div class="container-fluid">
     <!--  Row 1 -->
     <div class="row">
+      <div class="d-flex justify-content-end">
+        <a href="{{route('create_hero')}}" class="btn btn-primary">Yenisini yarat</a>
+      </div>
         <table class="table">
             <thead>
               <tr>
