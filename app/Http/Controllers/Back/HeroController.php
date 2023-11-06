@@ -33,16 +33,16 @@ class HeroController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
-        $currentTime = time(); // Anlık zamanı al
+        $currentTime = time(); 
         $currentTime = date('Y-m-d_H:i:s', $currentTime);
         $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension(); // Dosya uzantısını alın
+        $extension = $file->getClientOriginalExtension(); 
         $filename = $currentTime . '_' . $file->getClientOriginalName();
-        $file->move(public_path('back/images/hero'), $filename); // Dosyayı yeni adıyla hedef dizine taşı
+        $file->move(public_path('back/images/hero'), $filename); 
 
         $url = 'back/images/hero/' . $filename;
         $hero = Hero::create([
-            'title' => $request->input('title'), // Ensure 'title' is provided
+            'title' => $request->input('title'), 
             'content' => $request->input('content'),
             'image' => $url,
         ]);
