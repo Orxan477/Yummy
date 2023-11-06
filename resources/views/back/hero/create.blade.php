@@ -7,6 +7,11 @@
         <div class="card-body">
           <form method="post" action="{{route("create_hero")}}" enctype="multipart/form-data">
             @csrf
+            <ul style="list-style:disc;">
+              @foreach ($errors->all() as $error)
+                <li class="tex-danger">{{ $error }}</li>
+            @endforeach
+          </ul>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Image</label>
               <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
