@@ -36,7 +36,6 @@ class HeroController extends Controller
         $currentTime = time(); 
         $currentTime = date('Y-m-d_H:i:s', $currentTime);
         $file = $request->file('image');
-        $extension = $file->getClientOriginalExtension(); 
         $filename = $currentTime . '_' . $file->getClientOriginalName();
         $file->move(public_path('back/images/hero'), $filename); 
 
