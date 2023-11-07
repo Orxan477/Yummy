@@ -48,6 +48,8 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/statistic/update', [StatisticController::class, 'update'])->name('statistic.update');
     Route::post('/admin/statistic/update', [StatisticController::class, 'update_post'])->name('statistic.update_post');
 
+    Route::get('/admin/menu', [MenuController::class, 'index'])->name('menu');
+
     Route::get('/admin/faq', [FAQController::class, 'index'])->name('faq');
 
     Route::get('/admin/event', [EventController::class, 'index'])->name('event');
