@@ -33,3 +33,14 @@
 
 // Pages style (Required file)
 @import "./pages/dashboard1";
+
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    font-family: var(--font-secondary);
+  }
+  .logo span{
+    color: rgb(206, 18, 18);
+  }

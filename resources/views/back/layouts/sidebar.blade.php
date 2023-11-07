@@ -1,10 +1,22 @@
  <!-- Sidebar Start -->
+ <style>
+ .logo{
+  font-size: 35px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  font-family: var(--font-secondary);
+}
+.logo span{
+  color: rgb(206, 18, 18);
+} </style>
+ 
  <aside class="left-sidebar">
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="./index.html" class="text-nowrap logo-img">
-            <img src="{{('/back/images/logos/dark-logo.svg')}}" width="180" alt="" />
+            <h1 class="logo">Yummy<span>.</span></h1>
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
             <i class="ti ti-x fs-8"></i>

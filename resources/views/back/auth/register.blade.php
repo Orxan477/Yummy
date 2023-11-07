@@ -7,6 +7,16 @@
   <title>Modernize Free</title>
   <link rel="shortcut icon" type="image/png" href="{{('/back/images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{('/back/css/styles.min.css')}}" />
+  <style>.logo{
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    font-family: var(--font-secondary);
+  }
+  .logo span{
+    color: rgb(206, 18, 18);
+  } </style>
 </head>
 
 <body>
@@ -21,7 +31,7 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="/" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="{{('/back/images/logos/dark-logo.svg')}}" width="180" alt="">
+                  <h1 class="logo">Yummy<span>.</span></h1>
                 </a>
                 <form method="POST" action="{{ route('registerPost') }}">
                 @csrf
