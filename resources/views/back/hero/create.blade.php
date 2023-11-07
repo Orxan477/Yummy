@@ -9,21 +9,21 @@
             @csrf
             <ul style="list-style:disc;">
               @foreach ($errors->all() as $error)
-                <li class="tex-danger">{{ $error }}</li>
+                <li class="text-danger">{{ $error }}</li>
             @endforeach
           </ul>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Image</label>
-              <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Content</label>
-              <input type="text" name="content" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Title</label>
-                <input type="text" name="title" class="form-control" id="exampleInputPassword1">
-              </div>
+          <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" id="exampleInputPassword1" value="{{old('title')}}">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Content</label>
+            <input type="text" name="content" class="form-control" id="exampleInputPassword1" value="{{old('content')}}">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Image</label>
+            <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
             <button type="submit" class="btn btn-primary">Təsdiqlə </button>
           </form>
         </div>

@@ -34,6 +34,11 @@ Route::group(['middleware' => 'admin.access'], function () {
 
     Route::get('/admin/hero/create', [HeroController::class, 'create'])->name('create_hero');
     Route::post('/admin/hero/create', [HeroController::class, 'create_hero_post'])->name('create_hero_post');
+    Route::get('/admin/hero/detail/{id}', [HeroController::class, 'detail'])->name('product.detail');
+    Route::get('/admin/hero/update/{id}', [HeroController::class, 'update'])->name('product.update');
+    Route::post('/admin/hero/update', [HeroController::class, 'update_post'])->name('product.update_post');
+    
+    Route::get('/admin/hero/delete/{id}', [HeroController::class, 'delete'])->name('product.delete');
 
     Route::get('/admin/about', [AboutController::class, 'index'])->name('about');
 
