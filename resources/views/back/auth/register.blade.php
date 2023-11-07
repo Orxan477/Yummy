@@ -28,14 +28,14 @@
                 
                   <div class="mb-3">
                     <label for="exampleInputtext1" class="form-label">FullName</label>
-                    <input type="text" class="form-control" name="name" id="exampleInputtext1" aria-describedby="textHelp">
+                    <input type="text" class="form-control" name="name" id="exampleInputtext1" aria-describedby="textHelp" value="{{old('name')}}">
                     @error('name')
                         <p class="error text-danger">{{ $message }}</p>
                     @enderror  
                 </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                    <input type="string" name="email" class="form-control">
+                    <input type="string" name="email" class="form-control" value="{{old('email')}}">
                     @error('email')
                         <p class="error text-danger">{{ $message }}</p>
                     @enderror
