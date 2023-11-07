@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\AuthController;
 use App\Http\Controllers\Back\HeroController;
+use App\Http\Controllers\Back\StatisticController;
 use App\Http\Middleware\AuthAccess;
 
 /*
@@ -37,7 +38,6 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/hero/detail/{id}', [HeroController::class, 'detail'])->name('product.detail');
     Route::get('/admin/hero/update/{id}', [HeroController::class, 'update'])->name('product.update');
     Route::post('/admin/hero/update', [HeroController::class, 'update_post'])->name('product.update_post');
-    
     Route::get('/admin/hero/delete/{id}', [HeroController::class, 'delete'])->name('product.delete');
 
     Route::get('/admin/about', [AboutController::class, 'index'])->name('about');
@@ -45,6 +45,8 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/why', [WhyController::class, 'index'])->name('why');
 
     Route::get('/admin/statistic', [StatisticController::class, 'index'])->name('statistic');
+    Route::get('/admin/statistic/update', [StatisticController::class, 'update'])->name('statistic.update');
+    Route::post('/admin/statistic/update', [StatisticController::class, 'update_post'])->name('statistic.update_post');
 
     Route::get('/admin/faq', [FAQController::class, 'index'])->name('faq');
 
