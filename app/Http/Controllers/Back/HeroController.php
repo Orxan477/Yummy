@@ -27,7 +27,11 @@ class HeroController extends Controller
             'content' => 'required|string',
             'title' => 'required|string'
         ]);
-    
+        if($request->file('image')==null){
+            return redirect('/admin/hero/create')->withErrors([
+                'general' => 'Şəkil yüklənməlidir',
+            ])->withInput($request->all());
+        }
         if ($validator->fails()) {
             return redirect('/admin/hero/create')
                         ->withErrors($validator)
