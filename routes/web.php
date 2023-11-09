@@ -6,6 +6,7 @@ use App\Http\Controllers\Back\AuthController;
 use App\Http\Controllers\Back\HeroController;
 use App\Http\Controllers\Back\StatisticController;
 use App\Http\Controllers\Back\GalleryController;
+use App\Http\Controllers\Back\AboutController;
 use App\Http\Middleware\AuthAccess;
 
 /*
@@ -42,6 +43,9 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/hero/delete/{id}', [HeroController::class, 'delete'])->name('product.delete');
 
     Route::get('/admin/about', [AboutController::class, 'index'])->name('about');
+    Route::get('/admin/about/detail', [AboutController::class, 'detail'])->name('about.detail');
+    Route::get('/admin/about/update/{id}', [AboutController::class, 'update'])->name('about.update');
+    Route::post('/admin/about/update', [AboutController::class, 'update_post'])->name('about.update_post');
 
     Route::get('/admin/why', [WhyController::class, 'index'])->name('why');
 
