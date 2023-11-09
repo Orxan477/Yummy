@@ -5,6 +5,7 @@ use App\Http\Controllers\Back\AdminController;
 use App\Http\Controllers\Back\AuthController;
 use App\Http\Controllers\Back\HeroController;
 use App\Http\Controllers\Back\StatisticController;
+use App\Http\Controllers\Back\GalleryController;
 use App\Http\Middleware\AuthAccess;
 
 /*
@@ -59,6 +60,12 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/reservation', [ReservationController::class, 'index'])->name('reservation');
 
     Route::get('/admin/gallery', [GalleryController::class, 'index'])->name('gallery');
+    Route::get('/admin/gallery/create', [GalleryController::class, 'create'])->name('create_gallery');
+    Route::post('/admin/gallery/create', [GalleryController::class, 'create_post'])->name('create_gallery_post');
+    Route::get('/admin/gallery/update/{id}', [GalleryController::class, 'update'])->name('gallery.update');
+    Route::post('/admin/gallery/update', [GalleryController::class, 'update_post'])->name('gallery.update_post');
+    Route::get('/admin/gallery/delete/{id}', [GalleryController::class, 'delete'])->name('gallery.delete');
+
 
     Route::get('/admin/contactus', [ContactUsController::class, 'index'])->name('contact_us');
 

@@ -5,7 +5,7 @@
       <h5 class="card-title fw-semibold mb-4">Forms</h5>
       <div class="card">
         <div class="card-body">
-          <form method="post" action="{{route("create_gallery")}}" enctype="multipart/form-data">
+          <form method="post" action="{{route("create_gallery_post")}}" enctype="multipart/form-data">
             @csrf
             <ul style="list-style:disc;">
               @foreach ($errors->all() as $error)
