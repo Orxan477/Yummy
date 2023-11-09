@@ -3,6 +3,7 @@
 <div class="container-fluid">
     <!--  Row 1 -->
     <div class="row">
+        <h3 style="font-weight: bolder">Statistika</h3>
         <table class="table">
             <tbody>
                 <tr>

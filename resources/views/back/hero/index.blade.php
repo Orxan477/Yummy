@@ -4,7 +4,8 @@
 <div class="container-fluid">
     <!--  Row 1 -->
     <div class="row">
-      <div class="d-flex justify-content-end">
+      <div class="d-flex justify-content-between">
+        <h3 style="font-weight: bolder">Hero</h3>
         <a href="{{route('create_hero')}}" class="btn btn-primary">Yenisini yarat</a>
       </div>
         <table class="table">
