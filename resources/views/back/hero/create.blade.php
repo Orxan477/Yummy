@@ -17,6 +17,7 @@
             <input type="file" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
             <button type="submit" class="btn btn-primary">Təsdiqlə </button>
+            <a href="{{route('hero')}}" class="btn btn-light">Ləğv et</a>
           </form>
         </div>
       </div>
