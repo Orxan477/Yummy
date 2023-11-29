@@ -7,6 +7,7 @@ use App\Http\Controllers\Back\HeroController;
 use App\Http\Controllers\Back\StatisticController;
 use App\Http\Controllers\Back\GalleryController;
 use App\Http\Controllers\Back\AboutController;
+use App\Http\Controllers\Back\WhyController;
 use App\Http\Middleware\AuthAccess;
 
 /*
@@ -48,6 +49,9 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::post('/admin/about/update', [AboutController::class, 'update_post'])->name('about.update_post');
 
     Route::get('/admin/why', [WhyController::class, 'index'])->name('why');
+    Route::get('/admin/why/detail/{id}', [WhyController::class, 'detail'])->name('why.detail');
+    Route::get('/admin/why/update/{id}', [WhyController::class, 'update'])->name('why.update');
+    Route::post('/admin/why/update', [WhyController::class, 'update_post'])->name('why.update_post');
 
     Route::get('/admin/statistic', [StatisticController::class, 'index'])->name('statistic');
     Route::get('/admin/statistic/update', [StatisticController::class, 'update'])->name('statistic.update');
