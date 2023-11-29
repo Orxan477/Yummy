@@ -8,6 +8,7 @@ use App\Http\Controllers\Back\StatisticController;
 use App\Http\Controllers\Back\GalleryController;
 use App\Http\Controllers\Back\AboutController;
 use App\Http\Controllers\Back\WhyController;
+use App\Http\Controllers\Back\FaqController;
 use App\Http\Middleware\AuthAccess;
 
 /*
@@ -60,10 +61,14 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/menu', [MenuController::class, 'index'])->name('menu');
 
     Route::get('/admin/faq', [FAQController::class, 'index'])->name('faq');
-
-    Route::get('/admin/event', [EventController::class, 'index'])->name('event');
+    Route::get('/admin/faq/create', [FAQController::class, 'create'])->name('create_faq');
+    Route::post('/admin/faq/create', [FAQController::class, 'create_post'])->name('create_faq_post');
+    Route::get('/admin/faq/update', [FAQController::class, 'update'])->name('faq.update');
+    Route::post('/admin/faq/update', [FAQController::class, 'update_post'])->name('faq.update_post');
 
     Route::get('/admin/chef', [FAQController::class, 'index'])->name('chef');
+
+    Route::get('/admin/event', [EventController::class, 'index'])->name('event');
 
     Route::get('/admin/reservation', [ReservationController::class, 'index'])->name('reservation');
 
