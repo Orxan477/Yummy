@@ -9,6 +9,7 @@ use App\Http\Controllers\Back\GalleryController;
 use App\Http\Controllers\Back\AboutController;
 use App\Http\Controllers\Back\WhyController;
 use App\Http\Controllers\Back\FaqController;
+use App\Http\Controllers\Back\EventController;
 use App\Http\Middleware\AuthAccess;
 
 /*
