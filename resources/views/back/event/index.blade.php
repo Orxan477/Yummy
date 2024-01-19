@@ -6,7 +6,7 @@
     <div class="row">
       <div class="d-flex justify-content-between">
         <h3 style="font-weight: bolder">Tədbirlər</h3>
-        <a href="{{route('create_gallery')}}" class="btn btn-primary">Yenisini yarat</a>
+        <a href="{{route('create_event')}}" class="btn btn-primary">Yenisini yarat</a>
       </div>
         <table class="table">
             <thead>
@@ -28,7 +28,7 @@
                   <td>{{ Str::limit($item->content, 18) }}</td>
                   <td>{{$item->price}}</td>
                   <td>
-                      <a href="{{ route('about.detail', $item->id) }}" class="btn btn-light">
+                      <a href="{{ route('event.detail', $item->id) }}" class="btn btn-light">
                           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>

@@ -70,6 +70,13 @@ Route::group(['middleware' => 'admin.access'], function () {
     Route::get('/admin/chef', [FAQController::class, 'index'])->name('chef');
 
     Route::get('/admin/event', [EventController::class, 'index'])->name('event');
+    Route::get('/admin/event/detail/{id}', [EventController::class, 'detail'])->name('event.detail');
+    Route::get('/admin/event/create', [EventController::class, 'create'])->name('create_event');
+    Route::post('/admin/event/create', [EventController::class, 'create_event_post'])->name('create_event_post');
+    Route::get('/admin/event/update/{id}', [EventController::class, 'update'])->name('event.update');
+    Route::post('/admin/event/update', [EventController::class, 'update_post'])->name('event.update_post');
+    Route::get('/admin/event/delete/{id}', [EventController::class, 'delete'])->name('event.delete');
+
 
     Route::get('/admin/reservation', [ReservationController::class, 'index'])->name('reservation');
 
